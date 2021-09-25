@@ -1,0 +1,16 @@
+body{
+    font-size: 16px;
+}
+
+ul, ol{
+    padding: 0;
+}
+
+li{
+    margin-left: 60px;
+}
+
+.tag{
+    border: 1px solid black;
+    margin: 10px;
+}

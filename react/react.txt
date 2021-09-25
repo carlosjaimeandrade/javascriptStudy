@@ -1,0 +1,9 @@
+criar projeto react 
+npm i -g create-react-app 'baixa o modolo do node cria a versão já configurada
+create-react-app exercicio ' cria o projeto em si com o nome onde está exercicio
+npm start 'rodar o projeto
+
+
+
+npm init -y ' cria o arquivo packjason
+npm i --save json-server@0.13.0 -E ' baixar o  arquivo packjason a dependencia json serve

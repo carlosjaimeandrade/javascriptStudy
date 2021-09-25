@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Video</h1>
+    <video id="meuvideo" width="800" height="350"  autoplay controlsList="nodownload">
+        <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    </video>
+    <div>
+        <input sec_play='meuvideo' type="button" value="Play">
+    </div>
+    <div>
+        <div class="conteiner_progress">
+            <div sec_prog='meuvideo' class='row_progress'></div>
+        </div>
+    </div>
+</body>
+<style>
+    .conteiner_progress{
+        height: 20px;
+        width: 500px;
+        background-color: aliceblue;
+        border: solid 1px rgb(85, 85, 85);
+    }
+    .row_progress{   
+        background-color: red;
+        height: 100%;
+        width: 0%;
+        color: #fff;
+    }
+</style>
+<script>
+function play_video(id){
+    let video_status = true
+    let video = document.getElementById(id)
+    video.oncontextmenu = () => true
+
+    btn_play = document.querySelector(`[sec_play=${id}]`)
+    btn_play.onclick = () =>{
+        if (video_status == true){
+            video.play()
+            video_status = false
+            btn_play.value = "Pausar"
+        }else{
+            video.pause()
+            video_status = true
+            btn_play.value = "Play"
+        }
+
+        setInterval(() =>{
+            const percentual = (video.currentTime / video.duration) * 100
+            
+            const valorDiv = document.querySelector(`[sec_prog=${id}]`)
+            valorDiv.style.width = percentual + "%"
+
+           //valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+            valorDiv.innerHTML =  percentual.toFixed(1)
+        },1)
+        
+    }
+}
+
+play_video('meuvideo')
+</script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+       div{
+           font-size: 16px;
+           padding: 30px;
+           border: solid 1px black;
+       }
+       .static{ /* static padrao */
+           top: 100px;
+           left: 100px;
+           background-color: royalblue;
+       }
+       .fixed{ /* fixa absoluta */
+           position: fixed;
+           bottom: 0px;
+           right: 0px;
+           background-color: tomato;
+           z-index: 9999;
+       }
+
+       .relative1{ /* com base no componente anterior*/
+           position: relative;
+           left: 50px;
+           top: 30px;
+           background-color:aquamarine;
+       }
+
+       .absolute1{
+            position: absolute;
+            background-color: blue;
+            top: 0px;
+            left: 350px;
+            
+       }
+
+       .relative2{
+        position: relative;
+        height: 450px;
+        top: 2000px;
+        background-color: rgb(255, 0, 157);
+       }
+
+       .absolute2{
+        position: absolute;
+        background-color: rgb(0, 255, 234);
+        bottom: 0px;
+        left: 350px;
+       }
+
+       .sticky{
+           position: -webkit-sticky;
+           position: sticky;
+           background-color:rgb(189, 255, 127);
+           top: 0; 
+       }
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative</div>
+    <div class="absolute1">Absolute</div>
+
+    <div class="relative2">
+        <div class="absolute2"></div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

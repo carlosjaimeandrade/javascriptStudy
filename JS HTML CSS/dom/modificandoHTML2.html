@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        div.innerHTML = "ola mundo"
+        //div.outerHTML = "ola muundo"
+        div.insertAdjacentHTML('beforebegin', '<p>antes inicio<p>')
+        div.insertAdjacentHTML('afterbegin', '<p>depois <p>')
+        div.insertAdjacentHTML('beforeend', '<p>fim div <p>')
+        div.insertAdjacentHTML('afterend', '<p>fim <p>')
+
+        console.log(div.innerText)
+    </script>
+</body>
+
+</html>

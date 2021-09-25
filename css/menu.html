@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav_bar">
+        <h1>FastMediaSocial</h1>
+        <div class="menu_op ">
+            <ul >
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Inicio</a></li>    
+            </ul>
+        </div>
+    </div>
+
+    <div class='inf_promo'>
+        <div class="promo_esq">
+            <h1>FastMediaSocial</h1>
+        </div>
+        <div class="promo_dir">
+            
+            <h1>Aumente sua<br>presença digital</h1>
+            <h3>AUTOMATIZE AS SUAS TAREFAS COM UM CLIQUE</h3>
+           
+        </div>
+    </div>
+
+    <div class="conteudo">
+        ola
+    </div>
+    <footer>
+        <div class="footer">
+            ola
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+<style>
+    @font-face {
+    font-family: 'GowunDodum';
+        src: url('./font/Cabin-VariableFont_wdth\,wght.ttf');
+    }
+
+    *{
+        font-family: 'GowunDodum'
+    }
+    a{
+        text-decoration:none;
+        color: #fff;
+       
+    }
+    body{
+        background-color: #ECF9FD;
+        margin: 0;
+    }
+    ul{
+        text-align: center;
+        padding: 0;
+        margin: 0px 10px;
+        
+    }
+    
+    .menu_op li{
+        display: inline-block;
+
+    }
+
+    .menu_op a{
+        padding: 10px;
+    }
+
+    .menu_op{
+        margin: 20px 60px;
+    }
+
+    .menu_op a:hover{
+        box-shadow: 0px 1px #10F9BB;
+        color: #fff;
+        
+    }
+
+    .nav_bar{
+        background-color: #09485D;
+        display: flex;    
+        align-items: flex-start;
+        justify-content: flex-end;
+
+    }
+    .nav_bar h1{
+        margin: 20px 40px;
+        color: #fff;
+        font-size: 16px;
+        display: None;
+        
+    }
+
+    .promo_esq, .promo_dir{
+        text-align: center;
+        margin: 0px 80px;
+        color: #fff;
+
+    }
+
+    .inf_promo{
+        padding: 50px;
+        background-color: #09485D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    .promo_dir h1{
+        color: #10F9BB;
+        font-size: 3em;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    .promo_esq{
+        font-size: 23px; 
+    }
+    .conteudo{
+        background-color:black;
+        height: 320px;
+    }
+    .footer{
+        position: relative;
+        width: 100%;
+        bottom: 0px;
+        background-color: aqua;
+        height: 60px;
+
+    }
+
+    @media(max-width:679px){
+        .nav_bar h1{
+            display: Block;
+            
+        }
+        .nav_bar ul{
+            display: None;
+        }
+        .nav_bar{
+            justify-content: flex-start;
+        }
+        .promo_esq h1{
+            display: None;
+        }
+        .promo_dir h1{
+        font-size: 2em;
+    }
+    .promo_dir h3{
+        font-size: 1em;
+    }
+    }
+</style>

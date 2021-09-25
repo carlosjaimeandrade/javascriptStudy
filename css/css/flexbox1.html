@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #01</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        .flex-container{
+            border: 1px solid black;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row;
+            width: 50%;
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            height: 200px;
+            flex-flow: row wrap;
+
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            height: 400px;
+            align-items: stretch;
+            align-items: baseline;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: center;
+
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

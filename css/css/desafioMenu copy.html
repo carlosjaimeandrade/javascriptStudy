@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* ... */
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <nav class='btn-menu'>
+            <button seq-btn class="menu-toggle">
+                <i class="fa fa-lg fa-bars"></i>
+            </button>
+            <div class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+    <div seq-menu class="menu-flutuante">
+        <a href="#inicio">Início</a>     
+        <p seq-fechar >X</p>
+    </div>
+    <style>
+        .menu-flutuante{
+            float:right;
+            width: 100px;
+            height: 100px;;
+            background-color:rgb(75, 78, 202);
+            display: None;
+            
+        }
+        .btn-menu{
+            width:100%;
+            background-color: black;
+            display:flex;
+            justify-content: flex-end;
+            margin: 0px 5px;
+        }
+        .menu{
+            background-color: rgb(224, 241, 214);
+
+        }
+        .autenticacao{
+
+            display: flex;
+            background-color: rgb(202, 118, 15);
+        }
+        .autenticacao a{
+            margin: 0px 5px;
+        }
+
+        body{
+            margin: 0;
+        }
+        .cabecalho{
+            display: flex;
+            background-color: rgb(1, 94, 216);
+            height: 50px;
+            align-items: center;
+        }
+        .menu ul{
+            padding: 0px;
+            margin: 0px;
+        }
+        .menu li{
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu-toggle{
+            display: none;
+        }
+        .logo img{
+            background-color: bisque;
+            width: 200px;
+        }
+        @media(max-width: 600px){
+            .menu-toggle{
+                display: block;
+            }
+
+            ul{
+                display: None;
+            }
+            .autenticacao{
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        let btn = document.querySelector('[seq-btn]')
+        let menu = document.querySelector('[seq-menu]')
+        let fechar = document.querySelector('[seq-fechar]')
+ 
+        console.log(fechar)
+        fechar.onclick = () =>{
+            menu.style.display = 'None'
+        }
+
+        btn.onclick = () =>{
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>

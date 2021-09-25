@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <p wm-mais >+</p>
+        <p wm-menos >-</p>
+    </div>
+    <div class='retorno'>
+        <p wm-retorno>Antonio Gay</p>
+    </div>
+</body>
+<style>
+    .nav{
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav p{
+        text-align: center;
+        width: 30px;
+        cursor: pointer;
+        background-color: azure;
+        margin: 0 10px;
+        padding: 10px
+        
+    }
+    .nav p:hover{
+        color: #fff;
+        background-color: rgb(5, 157, 157);
+    }
+    .retorno p{
+        font-size: 16px;
+    }
+</style>
+<script>
+
+    const btn_mais = document.querySelector('[wm-mais]');
+
+    const btn_menos = document.querySelector('[wm-menos]');
+
+    const text_result = document.querySelector('[wm-retorno]');
+
+    let tamanho = 0;
+
+    resultado = 16;
+
+    btn_mais.onclick = () =>{
+        resultado++;
+        console.log(resultado)
+        text_result.style.fontSize = `${resultado}.px`
+    }
+
+    btn_menos.onclick = () =>{
+        console.log(resultado)
+        resultado--;
+        text_result.style.fontSize = `${resultado}.px`
+    }
+
+</script>
+</html>
