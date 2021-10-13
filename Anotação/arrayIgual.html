@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+
+<body>
+    <h1>Teste Array igual</h1>
+    <span wm-retorno></span>
+</body>
+
+</html>
+
+<script>
+    arrayIgual(['1', '2', '3'], ['1', '2', '3'])
+
+    function arrayIgual(array1, array2) {
+        const retorno = document.querySelector('[wm-retorno]')
+        let contador = 0
+        let diferentes = 0
+        if (array1.length == array2.length) {
+            while (contador < array1.length) {
+                if (array1.sort()[contador] != array2.sort()[contador]) {
+                    diferentes++
+                    console.log(contador)
+                    console.log(array1.sort()[contador])
+                    console.log(array2.sort()[contador])
+                }
+                contador++
+            }
+            if (diferentes == 0) {
+                retorno.innerHTML = 'Valores iguais'
+            } else {
+                retorno.innerHTML = 'Valores diferente'
+            }
+        } else {
+            retorno.innerHTML = 'Não é igual'
+        }
+    }
+</script>
