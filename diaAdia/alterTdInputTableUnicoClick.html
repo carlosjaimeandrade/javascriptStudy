@@ -1,0 +1,27 @@
+<table class="table">
+    <tbody>
+        <tr>
+            <td onclick="editInput(event)">asdsadsd</td>
+            <td><i class="fa fa-minus-circle" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td onclick="editInput(event)">Produto exemplo da area</td>
+            <td><i class="fa fa-minus-circle" aria-hidden="true"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function editInput(event) {
+        console.log('chegou')
+        const textoTd = event.target.innerText
+        event.target.innerHTML = `<input value='${textoTd}' type="text" onblur="normalTd(event)">`
+        event.target.children[0].focus()
+    }
+
+    function normalTd(event) {
+        const valor = event.target.value
+        const td = event.target.parentNode
+        td.innerText = valor
+    }
+</script>
