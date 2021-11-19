@@ -1,0 +1,38 @@
+<table class="table">
+    <tbody>
+        <tr>
+            <td wm-input-update>asdsadsd</td>
+            <td><i class="fa fa-minus-circle" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td wm-input-update>Produto exemplo da area</td>
+            <td><i class="fa fa-minus-circle" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td>Produto exemplo da area</td>
+            <td><i class="fa fa-minus-circle" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+            <td>Produto exemplo da area</td>
+            <td><i class="fa fa-minus-circle" aria-hidden="true"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    const inputArea = document.querySelectorAll('[wm-input-update]')
+
+    inputArea.forEach(e => {
+        e.addEventListener('dblclick', function(e) {
+            const textoTd = e.target.innerText
+            e.target.innerHTML = `<input  value='${textoTd}' type="text" onblur="normalTd(event)">`
+            e.target.children[0].focus()
+        })
+    })
+
+    function normalTd(event) {
+        const valor = event.target.value
+        const td = event.target.parentNode
+        td.innerText = valor
+    }
+</script>
