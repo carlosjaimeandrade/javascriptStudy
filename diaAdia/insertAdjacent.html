@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div modal class='modal'>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    var cars = {
+        cor: 'vermelho',
+        marca: 'Ferrari',
+        potencia: '700',
+        blindado: false,
+        Aaro: 21
+    };
+
+    const modal = document.querySelector('[modal]')
+    Object.keys(cars).forEach((car) => {
+        modal.insertAdjacentHTML('beforeend', `<span><b>${car}: </b>${cars[car]}</span>`)
+    })
+</script>
+
+<style>
+    .modal {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(199, 197, 197);
+    }
+</style>
