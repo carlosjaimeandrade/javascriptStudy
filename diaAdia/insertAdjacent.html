@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div class='aumentar'>
+        <div onclick="aumentar()">+</div>
+        <div onclick="diminuir()">-</div>
+    </div>
     <div modal class='modal'>
 
     </div>
@@ -27,8 +31,25 @@
 
     const modal = document.querySelector('[modal]')
     Object.keys(cars).forEach((car) => {
-        modal.insertAdjacentHTML('beforeend', `<span><b>${car}: </b>${cars[car]}</span>`)
+        modal.insertAdjacentHTML('beforeend', `<p><b>${car}: </b>${cars[car]}</p>`)
     })
+    var _tamanho = 16
+
+    function aumentar() {
+
+        const body = document.querySelector('[modal]')
+        _tamanho = _tamanho + 1
+        body.style.fontSize = `${_tamanho}px`
+            //var computedFontSize = window.getComputedStyle(modal).fontSize
+    }
+
+    function diminuir() {
+
+        const body = document.querySelector('[modal]')
+        _tamanho = _tamanho - 1
+        body.style.fontSize = `${_tamanho}px`
+            //var computedFontSize = window.getComputedStyle(modal).fontSize
+    }
 </script>
 
 <style>
@@ -36,5 +57,20 @@
         display: flex;
         flex-direction: column;
         background-color: rgb(199, 197, 197);
+        font-size: 16px;
+    }
+    
+    .aumentar {
+        display: flex;
+    }
+    
+    .aumentar>div {
+        margin: 10px;
+        background-color: green;
+        padding: 10px;
+        color: white;
+        height: 20px;
+        justify-content: center;
+        cursor: pointer;
     }
 </style>
