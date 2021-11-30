@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select wm-select name="" id="">
+        <option>Macho</option>
+        <option>Femea</option>
+    </select>
+</body>
+
+</html>
+
+<script>
+    const select = document.querySelector('[wm-select]').children
+    const valorSimuladoDoBack = 'Macho'
+    for (var i = 0; i < select.length; i++) {
+        if (select[i].value == valorSimuladoDoBack) {
+            select[i].setAttribute('selected', '')
+        }
+    }
+</script>
