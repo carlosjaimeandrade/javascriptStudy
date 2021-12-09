@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <button wm-abrir>Abrir</button>
     <div class='popUp'>
         <div class='pop-header'>
             <h1>Exemplo</h1>
@@ -25,13 +26,17 @@
 
 <script>
     const fechar = document.querySelector('[wm-fechar]')
-    console.log(fechar)
+    const abrir = document.querySelector('[wm-abrir]')
     const popUp = document.querySelector('.popUp')
+    abrir.onclick = () => {
+        popUp.style.display = 'block';
+    }
     fechar.onclick = () => {
         popUp.style.opacity = '0';
 
         setTimeout(() => {
             popUp.style.display = 'none';
+            popUp.style.opacity = '1';
         }, 1000)
     }
 </script>
@@ -42,6 +47,7 @@
         width: 350px;
         animation: fadeIn 1s;
         transition: 1s;
+        display: none;
     }
     
     .pop-header {
