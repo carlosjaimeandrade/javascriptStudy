@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='popUp'>
+        <div class='pop-header'>
+            <h1>Exemplo</h1>
+            <span wm-fechar>X</span>
+        </div>
+        <div>
+            <p>SOKDOPASKDOPASKDOPAKDFSAD ASDKOPASKDo POSADKOSa
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const fechar = document.querySelector('[wm-fechar]')
+    console.log(fechar)
+    const popUp = document.querySelector('.popUp')
+    fechar.onclick = () => {
+        popUp.style.opacity = '0';
+
+        setTimeout(() => {
+            popUp.style.display = 'none';
+        }, 1000)
+    }
+</script>
+
+<style>
+    .popUp {
+        background-color: rgba(12, 65, 179, 0.11);
+        width: 350px;
+        animation: fadeIn 1s;
+        transition: 1s;
+    }
+    
+    .pop-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0
+        }
+        to {
+            opacity: 1
+        }
+    }
+</style>

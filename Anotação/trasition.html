@@ -1,0 +1,26 @@
+<div class="box">
+    <img id="move" src="http://placekitten.com/200/300" alt="Pic" />
+</div>
+
+<style>
+    .box img {
+        margin-left: 0;
+        transition: 1s;
+    }
+</style>
+
+<script>
+    (function() {
+        var move = document.getElementById('move');
+
+        move.onclick = function() {
+
+            if (move.style.marginLeft === "500px") {
+                move.style.marginLeft = "0";
+
+            } else {
+                move.style.marginLeft = "500px";
+            }
+        };
+    })();
+</script>
