@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Ajax com jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script type="text/javascript" language="javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+
+</head>
+
+<body class="conteudo exercicio">
+    <h1>jQuery Get/Post</h1>
+    <div id="get"></div>
+    <div id="post"></div>
+
+    <script>
+        $.ajax({
+            url: "https://api.github.com/users/tailomateus/repos",
+            dataType: 'json',
+            success: function(response) {
+                console.log(response);
+            }
+        });
+    </script>
+</body>
